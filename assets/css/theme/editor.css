@@ -1,0 +1,138 @@
+/**
+    * WordPress Xidipity Theme
+    * Editor specific css classes
+    *
+    * ###:  assets/css/theme/editor.css
+    * bld:  30201201
+    * src:  github.com/WpThemeDev/xidipity/
+    * (C)   2018-2021 John Baer
+    *
+*/
+/*
+***
+    * element: <body>
+    * dsc: body
+    * ver: 200520
+    * fnt: html body (see common.css, web.css for other property values)
+    * ref: developer.mozilla.org/en-US/docs/Web/API/Body
+***
+*/
+.mce-content-body {
+	background-color: var(--hue-wht);
+	color: var(--hue-bas-dn4);
+	margin: 1rem;
+	-webkit-font-smoothing: antialiased !important;
+}
+body.webkit strong,
+body.webkit b {
+	font-weight: bolder !important;
+}
+/*
+***
+    property: mce
+    * dsc: editor specific formatting
+    * ver: 190926-1
+    * fnt: apply mce formatting
+    * ref: developer.mozilla.org/en-US/docs/Web/CSS/display
+***
+*/
+.mce\[dsp\:none\] {
+	display: none;
+}
+.mce\[dsp\:hidden\] {
+	visibility: hidden;
+}
+.mce\[dsp\:block\] {
+	display: block;
+}
+.mce\[dsp\:inline\] {
+	display: inline;
+}
+.mce\[dsp\:inline-block\] {
+	display: inline-block;
+}
+img {}
+/*
+***
+    * element: pre:dot
+    * dsc: mark pre
+    * ver: 200315
+    * fnt: add dot to pre in editor
+    * ref: supports code_container template
+***
+*/
+.mce\[pre\:dot\]::before {
+	color: var(--hue-sec);
+	content: "\f111";
+	font-family: "Font Awesome 5 Free";
+	font-size: x-small;
+	font-weight: 900;
+	margin-left: -0.9375rem;
+	margin-top: -1.125rem;
+	position: absolute;
+	z-index: 1;
+}
+/*
+***
+    * property: vs
+    * dsc: vertical space
+    * ver: 200222
+    * fnt: set line height
+    * ref: developer.mozilla.org/en-US/docs/Web/CSS/line-height
+***
+*/
+.vs\:1\/2,
+.vs\:3\/4,
+.vs\:1,
+.vs\:1-1\/2,
+.vs\:2,
+.vs\:2-1\/2,
+.vs\:3 {
+	background-color: var(--hue-bas-tint);
+}
+/*
+***
+    * element: <ul>
+    * dsc: paragraph list
+    * ver: 200531
+    * fnt: use list for block indentation
+    * ref:
+***
+*/
+ul.par,
+ul.par li>ul {
+	border-left: thin dashed var(--hue-pri-up3);
+	margin-left: 1.25rem;
+	padding-left: 0.5rem !important;
+}
+*/
+/*
+***
+    element: <table>
+    * ver: 30201201
+    * fnt: multi columns
+    * ref: see common.css
+***
+*/
+table.cols\:auto-2,
+table.cols\:auto-3,
+table.cols\:auto-4 {
+	border-color: transparent !important;
+}
+table.cols\:auto-2>tbody>tr>td,
+table.cols\:auto-3>tbody>tr>td,
+table.cols\:auto-4>tbody>tr>td,
+table.cols\:fixed-2>tbody>tr>td,
+table.cols\:fixed-3>tbody>tr>td,
+table.cols\:fixed-4>tbody>tr>td {
+	background-color: var(--hue-bas-tint);
+	border-color: transparent !important;
+}
+table.cols\:fixed-2>tbody>tr>td:not(:last-child),
+table.cols\:fixed-3>tbody>tr>td:not(:last-child),
+table.cols\:fixed-4>tbody>tr>td:not(:last-child) {
+	border-right: solid 1px var(--hue-sec-up3) !important;
+}
+/*
+ * EOF: assets/css/theme/editor.css / 30201201
+ */
