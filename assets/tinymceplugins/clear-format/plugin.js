@@ -1,0 +1,22 @@
+/*
+  21.09.17
+  WordPress Xidipity Theme
+  Tinymce clear-format plugin
+  purpose:  remove html formatting
+  source:   github.com/WpThemeDev/xidipity/
+  (C)	https://doc.xidipity.com/license/
+*/
+tinymce.PluginManager.add("clear_format", function (editor) {
+  "use strict";
+  editor.addButton("clear_format", {
+    title: "Clear Format",
+    icon: false,
+    image:
+      "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4IiB2aWV3Qm94PSIwIDAgMzIgMzIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+X2ljb248L3RpdGxlPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9Il9pY29uIj4KICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlBhdGgiIHBvaW50cz0iMCAwIDMyIDAgMzIgMzIgMCAzMiI+PC9wb2x5Z29uPgogICAgICAgICAgICA8cGF0aCBkPSJNMjIuNjY2NjY2NywyMCBMMjgsMjUuMzMzMzMzMyBNMjgsMjAgTDIyLjY2NjY2NjcsMjUuMzMzMzMzMyIgaWQ9IlNoYXBlIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CiAgICAgICAgICAgIDxwb2x5bGluZSBpZD0iUGF0aCIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgcG9pbnRzPSI5LjMzMzMzMzMzIDggOS4zMzMzMzMzMyA2LjY2NjY2NjY3IDI0IDYuNjY2NjY2NjcgMjQgOCI+PC9wb2x5bGluZT4KICAgICAgICAgICAgPGxpbmUgeDE9IjkuMzMzMzMzMzMiIHkxPSIyNS4zMzMzMzMzIiB4Mj0iMTQuNjY2NjY2NyIgeTI9IjI1LjMzMzMzMzMiIGlkPSJQYXRoIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L2xpbmU+CiAgICAgICAgICAgIDxsaW5lIHgxPSIxNy4zMzMzMzMzIiB5MT0iNi42NjY2NjY2NyIgeDI9IjEyIiB5Mj0iMjUuMzMzMzMzMyIgaWQ9IlBhdGgiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvbGluZT4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==",
+    cmd: "RemoveFormat",
+  });
+});
+/* 
+  END: mce toolbar
+  EOF: clear-format / plugin.js / 21.09.17
+*/
