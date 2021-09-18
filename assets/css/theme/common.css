@@ -1,0 +1,2108 @@
+/**
+    * WordPress Xidipity Theme
+    * Shared css clases
+    *
+    * ###:  assets/css/theme/common.css
+    * bld:  210630-1
+    * src:  github.com/WpThemeDev/xidipity/
+    * (C)   2018-2021 John Baer
+    *
+*/
+/*
+***
+    * element: <body>
+    * ver: 200222
+    * fnt: html body (see web.css for other property values)
+    * ref: developer.mozilla.org/en-US/docs/Web/API/Body
+***
+*/
+body,
+.mce-content-body {
+	background-color: var(--dft-bg-color);
+	color: var(--dft-fg-color);
+	counter-reset: section;
+	font-family: var(--dft-font-family);
+	font-size: var(--dft-font-size);
+	font-weight: var(--dft-font-weight);
+	line-height: var(--dft-line-height);
+	overflow-wrap: anywhere !important;
+}
+/*
+***
+    * custom tag: <cmt>
+    * ver: 28200801
+    * fnt: alternate to "<!--", allows more options
+    * ref: dev.to/jfbrennan/custom-html-tags-4788
+***
+*/
+cmt {
+	display: none;
+	white-space: pre;
+}
+/*
+***
+    * property: cmt:html
+    * ver: 200513
+    * fnt: alternate method to "<!--"
+    * ref:
+***
+*/
+cmthtml {
+	display: none;
+}
+/*
+***
+    * element: <pre>
+    * ver: 200520
+    * fnt: preformatted text which is to be presented exactly as written
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/pre
+***
+*/
+pre,
+pre.wrap {
+	background-color: var(--content-bg-color);
+	border-radius: 0.3333rem;
+	color: var(--dft-fg-color);
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-smaller);
+	padding: 0.5rem 0 0.5rem 0;
+	width: 100%;
+}
+pre {
+	overflow-x: scroll;
+}
+pre.wrap {
+	white-space: pre-wrap;
+}
+pre.dsp\:line-nums {
+	font-family: var(--font-family-mono);
+	font-weight: var(--dft-font-weight);
+}
+pre.dsp\:line-nums:before {
+	counter-reset: listing;
+}
+pre.dsp\:line-nums var {
+	counter-increment: listing;
+}
+pre.dsp\:line-nums var::before {
+	border-right: solid thin var(--hue-sec-up1);
+	color: var(--hue-bas-dn1);
+	content: counter(listing);
+	display: inline-block;
+	margin-left: auto;
+	margin-right: 0.5rem;
+	padding-left: auto;
+	padding-right: 0.5rem;
+	text-align: right;
+	width: 2rem;
+}
+/*
+***
+    * element: text tags
+    * ver: 28200701
+    * fnt: format text
+    * ref:
+***
+*/
+code,
+kbd,
+var {
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-smaller);
+	font-style: var(--font-style-normal);
+}
+pre var {
+	color: var(--hue-pri-dn1);
+}
+code {
+	background-color: transparent !important;
+	color: var(--hue-pri) !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+kbd {
+	background-color: var(--hue-pri-up5);
+	border-radius: 0.1666rem;
+	padding: 0 0.125rem 0 0.125rem;
+}
+mark {
+	background-color: var(--hue-pri-tint-dn1);
+	text-decoration: none;
+}
+ins {
+	border-bottom: solid thin #0000FF;
+	color: #0000FF;
+	text-decoration: none;
+}
+del,
+s {
+	text-decoration: line-through;
+	text-decoration-color: #CC0000;
+}
+del {
+	color: #CC0000;
+}
+small {
+	font-size: var(--font-size-smaller);
+}
+big {
+	font-size: var(--font-size-larger);
+}
+samp {
+	font-family: var(--font-family-mono);
+}
+samp {
+	border-bottom: solid medium var(--hue-sec);
+	font-weight: bolder;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+}
+strong {
+	border-bottom: solid thin var(--hue-pri);
+	font-style: oblique;
+	font-weight: var(--lnk-dft-wgt);
+}
+strong:hover {
+	border-bottom-color: var(--lnk-hvr-fg-hue);
+}
+u {
+	border-bottom: solid thin;
+	text-decoration: none;
+}
+i {
+	font-style: italic;
+}
+em {
+	font-style: oblique;
+	font-weight: bolder;
+}
+abbr {
+	font-weight: bolder !important;
+	text-transform: uppercase;
+}
+/*
+***
+    * property: adsbygoogle
+    * ver: 201001
+    * fnt: set bkg / bdr to content bkg
+    * ref:
+***
+*/
+.adsbygoogle {
+	background-color: var(--content-bg-color);
+	border: 1px solid var(--content-bg-color);
+}
+/*
+***
+    * element: <hr>
+    * ver: 200222
+    * fnt: thematic break between paragraph-level elements
+    *      default the width is 100% of available space
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/hr
+***
+*/
+hr.rul\:1x {
+	background-color: transparent;
+	border: 0;
+	border-bottom: 0.0625rem solid var(--hue-bas);
+	margin-bottom: 0.6875rem;
+	margin-top: 0.6875rem;
+	width: 100%;
+}
+hr,
+hr.rul\:2x {
+	background-color: transparent;
+	border: 0;
+	border-bottom: 0.125rem solid var(--hue-bas);
+	margin-bottom: 0.6875rem;
+	margin-top: 0.625rem;
+	width: 100%;
+}
+hr.rul\:3x {
+	background-color: transparent;
+	border: 0;
+	border-bottom: 0.1875rem solid var(--hue-bas);
+	margin-bottom: 0.6875rem;
+	margin-top: 0.5625rem;
+	width: 100%;
+}
+hr.rul\:4x {
+	background-color: transparent;
+	border: 0;
+	border-bottom: 0.25rem solid var(--hue-bas);
+	margin-bottom: 0.6275rem;
+	margin-top: 0.5625rem;
+	width: 100%;
+}
+hr.rul\:dbl {
+	background-color: transparent;
+	border: 0;
+	border-bottom: 0.0625rem solid var(--hue-bas);
+	margin-bottom: 0.5rem;
+	border-top: 0.0625rem solid var(--hue-bas);
+	height: 0.25rem;
+	margin-top: 0.5625rem;
+}
+hr.rul\:grd {
+	background-color: transparent;
+	background-image: linear-gradient(left , white 2%, #c9c3bc 50%, white 98%);
+	background-image: -o-linear-gradient(left , white 2%, #c9c3bc 50%, white 98%);
+	background-image: -moz-linear-gradient(left , white 2%, #c9c3bc 50%, white 98%);
+	background-image: -webkit-linear-gradient(left , white 2%, #c9c3bc 50%, white 98%);
+	background-image: -ms-linear-gradient(left , white 2%, #c9c3bc 50%, white 98%);
+	background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, gray), color-stop(0.98, white) );
+	border: 0;
+	height: 0.0625rem;
+	margin: 0.6875rem auto 0.6875rem auto;
+	width: 100%;
+}
+/*
+***
+    * elements: <audio> / <canvas> / <iframe>
+    *           <object> / <progress> / <video>
+    * ver: 190910-1
+    * fnt: by default, force width to 100%
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/hr
+***
+*/
+audio,
+canvas,
+embed,
+iframe,
+object,
+progress,
+video {
+	height: auto;
+	width: auto;
+}
+/*
+***
+    * elements: embed
+    * ver: 30201201
+    * video wrapper
+    * ref: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
+***
+*/
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/*
+***
+    * element: <a>
+    * ver: 190910-1
+    * fnt: anchor element creates a hyperlink to other web pages
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+***
+*/
+a {
+	background-color: var(--lnk-dft-bg-hue);
+	color: var(--lnk-dft-fg-hue);
+	font-weight: var(--lnk-dft-wgt);
+	text-decoration: var(--lnk-dft-decor);
+}
+a:visited {
+	background-color: var(--lnk-vst-bg-hue);
+	color: var(--lnk-vst-fg-hue);
+	font-weight: var(--lnk-vst-wgt);
+	text-decoration: var(--lnk-vst-decor);
+}
+a:active,
+a:focus,
+a:hover {
+	background-color: var(--lnk-hvr-bg-hue);
+	color: var(--lnk-hvr-fg-hue);
+	font-weight: var(--lnk-hvr-wgt);
+	text-decoration: var(--lnk-hvr-decor);
+	-webkit-tap-highlight-color: transparent;
+}
+a:focus {
+	outline: none;
+}
+/*
+***
+    * property: ul
+    * ver: 200308
+    * fnt: replace ul bullet with icon
+    * ref:
+***
+*/
+.ul\:icon {
+	list-style-type: none;
+}
+/*: fx:r fxa:1 fxb:3 fxc:1 :*/
+.ul\:icon>li {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	margin-left: -1.625rem;
+}
+.ul\:icon-itm:nth-child(1) {
+	text-align: center;
+	max-width: 1.625rem;
+	min-width: 1.625rem;
+}
+.ul\:icon-itm:nth-child(2) {
+	font-size: inherit;
+}
+/*: Google icon adjustments :*/
+.ul\:icon-itm>.material-icons,
+.ul\:icon-itm>.material-icons-outlined,
+.ul\:icon-itm>.material-icons-round,
+.ul\:icon-itm>.material-icons-sharp,
+.ul\:icon-itm>.material-icons-two-tone {
+	font-size: 1.125rem;
+	vertical-align: middle;
+}
+/*
+***
+    * element: ul
+    * ver: 200308
+    * fnt: setup (responsive) ul for image bullet
+    * ref:
+***
+*/
+.ul\:img {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+/*: fx:c fxa:1 fxb:3 fxc:1 :*/
+.ul\:img>li {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+.ul\:img-itm:nth-child(1) {
+	width: 100%;
+}
+.ul\:img-itm:nth-child(2) {
+	padding-top: 0.5rem;
+}
+/*: sm)table media :*/
+@media (min-width: 600px) {
+	.ul\:img {
+		margin-left: -0.25rem;
+	}
+}
+/*: standard media :*/
+@media (min-width: 1024px) {
+	.ul\:img {
+		margin-left: 1rem;
+		padding-left: 1rem;
+	}
+	/*: fx:r fxa:1 fxb:3 fxc:1 :*/
+	.ul\:img>li {
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+	.ul\:img-itm:nth-child(1) {
+		min-width: 15rem;
+		max-width: 15rem;
+	}
+	.ul\:img-itm:nth-child(2) {
+		padding-top: 0;
+		padding-left: 0.5rem;
+	}
+}
+/*
+***
+    * element: <ol> / <ul>
+    * ver: 01210115
+    * fnt: set list item padding
+    * ref:
+***
+*/
+ul.li\:1x-spaced li:not(:last-child),
+ol.li\:1x-spaced li:not(:last-child),
+ul.li\:qtr-spaced li:not(:last-child),
+ol.li\:qtr-spaced li:not(:last-child) {
+	margin-bottom: 0.375rem;
+} 
+ul.li\:2x-spaced li:not(:last-child),
+ol.li\:2x-spaced li:not(:last-child),
+ul.li\:dbl-spaced li:not(:last-child),
+ol.li\:dbl-spaced li:not(:last-child) {
+	margin-bottom: 0.75rem;
+} 
+ul.li\:3x-spaced li:not(:last-child),
+ol.li\:3x-spaced li:not(:last-child),
+ul.li\:tpl-spaced li:not(:last-child),
+ol.li\:tpl-spaced li:not(:last-child) {
+	margin-bottom: 1.125rem;
+} 
+/*
+***
+    * element: <ul>
+    * ver: 190910-1
+    * fnt: unordered list of items with pre-defined bullets
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
+***
+*/
+ul {
+	list-style-type: disc;
+	line-height: var(--dft-line-height);
+	margin-left: 1rem;
+	padding-left: 1rem;
+}
+ul.circle,
+ul.circle ul:nth-of-type(1) {
+	list-style-type: circle;
+}
+ul.dash,
+ul.dash ul:nth-of-type(1) {
+	list-style-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='16' height='16' viewBox='0 -6 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cline style='stroke: rgb(0, 0, 0); paint-order: stroke; stroke-width: 3px; stroke-linecap: round;' x1='7.222' y1='12' x2='16.779' y2='12'/%3E%3C/svg%3E");
+}
+ul.square,
+ul.square ul:nth-of-type(1) {
+	list-style-type: square;
+}
+ul.mixed {
+	list-style-type: disc;
+}
+ul.mixed ul {
+	list-style-type: circle;
+}
+ul.mixed ul ul {
+	list-style-type: square;
+}
+ul.mixed ul ul ul {
+	list-style-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='16' height='16' viewBox='0 -6 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cline style='stroke: rgb(0, 0, 0); paint-order: stroke; stroke-width: 3px; stroke-linecap: round;' x1='7.222' y1='12' x2='16.779' y2='12'/%3E%3C/svg%3E");
+}
+ul.mixed ul ul ul ul {
+	list-style-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='16' height='16' viewBox='0 -2 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Ccircle style='' cx='6.37' cy='21.39' r='1.349'/%3E%3Ccircle style='' cx='12' cy='21.39' r='1.349'/%3E%3Ccircle style='' cx='17.37' cy='21.39' r='1.349'/%3E%3C/svg%3E");
+}
+/*
+***
+    * element: <ul>
+    * ver: 200304
+    * fnt: unordered list to be used for paragraph
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
+***
+*/
+ul.par,
+ul.par li>ul {
+	list-style-type: none;
+	margin-left: 2.5rem;
+	padding: 0;
+}
+/*
+***
+    * element: <ol>
+    * ver: 190910-1
+    * fnt: ordered list of items with pre-defined bullets
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/ol
+***
+*/
+ol,
+ol.decimal {
+	list-style-type: decimal;
+	line-height: var(--dft-line-height);
+	margin-left: 1rem;
+	padding-left: 1rem;
+}
+ol.alpha,
+ol.alpha ol:nth-of-type(1) {
+	list-style-type: lower-alpha;
+}
+ol.alpha-alt,
+ol.alpha-alt ol:nth-of-type(1) {
+	list-style-type: upper-alpha;
+}
+ol.roman,
+ol.roman ol:nth-of-type(1) {
+	list-style-type: upper-roman;
+}
+ol.outline {
+	list-style-type: upper-roman;
+}
+ol.outline ol {
+	list-style-type: upper-alpha;
+}
+ol.outline ol ol {
+	list-style-type: decimal;
+}
+ol.outline ol ol ol {
+	list-style-type: lower-alpha;
+}
+ol.outline ol ol ol ol {
+	counter-reset: list;
+}
+ol.outline ol ol ol ol>li {
+	list-style: none;
+}
+ol.outline ol ol ol ol>li:before {
+	content: counter(list, decimal) ") ";
+	counter-increment: list;
+	padding-left: 1.5em;
+	margin-left: -2.9em;
+	margin-right: .25em;
+}
+/*  # dec-dot
+    # 29200815
+    # x.x ordered list
+    # developer.mozilla.org/en-US/docs/Web/CSS/counters
+**/
+ol.decimal {
+	counter-reset: listCounter;
+}
+ol.decimal li {
+	counter-increment: listCounter;
+}
+ol.decimal li ol.decimal {
+	list-style-type: none;
+	margin-left: 0.5625rem;
+	padding-left: 0.5625rem;
+}
+ol.decimal li ol.decimal li ol.decimal {
+	margin-left: 1rem;
+	padding-left: 1rem;
+}
+ol.decimal li ol.decimal li::before {
+	content:  counters(listCounter, ".") "\a0\a0";
+}
+/*
+***
+    * property: li-hrz
+    * ver: 28200701
+    * fnt: display list horizontally
+    * ref:
+***
+*/
+.dsp\:li-hrz {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+.dsp\:li-hrz li>ul {
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+.dsp\:li-hrz,
+.dsp\:li-hrz li>ul {
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+}
+.dsp\:li-hrz li:not(:last-child) {
+	padding-right: 1.75rem;
+}
+.dsp\:li-hrz li>ul li:first-child {
+	margin-left: -0.5rem;
+}
+/*
+***
+    * property: li-vrt
+    * ver: 28200701
+    * fnt: display list virtually
+    * ref:
+***
+*/
+.dsp\:li-vrt,
+.dsp\:li-vrt li>ul {
+	display: block;
+}
+.dsp\:li-vrt li:nth-child(1n) {
+	line-height: var(--dft-line-height);
+	margin-left: 0;
+	padding-left: 0;
+}
+/* hack:( corrects line 817 when this class follows li-hrz */
+.dsp\:li-hrz li>ul li:first-child {
+	margin-left: 0;
+}
+@media (min-width:600px) {
+	.sm\)dsp\:li-hrz {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	}
+	.sm\)dsp\:li-hrz li>ul {
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+	}
+	.sm\)dsp\:li-hrz,
+	.sm\)dsp\:li-hrz li>ul {
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+	}
+	.sm\)dsp\:li-hrz li:not(:last-child) {
+		padding-right: 1.75rem;
+	}
+	.sm\)dsp\:li-hrz li>ul li:first-child {
+		margin-left: -0.5rem;
+	}
+	.sm\)dsp\:li-vrt,
+	.sm\)dsp\:li-vrt li>ul {
+		display: block;
+	}
+	.sm\)dsp\:li-vrt li:nth-child(1n) {
+		line-height: var(--dft-line-height);
+		margin-left: 0;
+		padding-left: 0;
+	}
+}
+@media (min-width:900px) {
+	.md\)dsp\:li-hrz {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	}
+	.md\)dsp\:li-hrz li>ul {
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+	}
+	.md\)dsp\:li-hrz,
+	.md\)dsp\:li-hrz li>ul {
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+	}
+	.md\)dsp\:li-hrz li:not(:last-child) {
+		padding-right: 1.75rem;
+	}
+	.md\)dsp\:li-hrz li>ul li:first-child {
+		margin-left: -0.5rem;
+	}
+	.md\)dsp\:li-vrt,
+	.md\)dsp\:li-vrt li>ul {
+		display: block;
+	}
+	.md\)dsp\:li-vrt li:nth-child(1n) {
+		line-height: var(--dft-line-height);
+		margin-left: 0;
+		padding-left: 0;
+	}
+}
+@media (min-width:1200px) {
+	.lg\)dsp\:li-hrz {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	}
+	.lg\)dsp\:li-hrz li>ul {
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+	}
+	.lg\)dsp\:li-hrz,
+	.lg\)dsp\:li-hrz li>ul {
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+	}
+	.lg\)dsp\:li-hrz li:not(:last-child) {
+		padding-right: 1.75rem;
+	}
+	.lg\)dsp\:li-hrz li>ul li:first-child {
+		margin-left: -0.5rem;
+	}
+	.lg\)dsp\:li-vrt,
+	.lg\)dsp\:li-vrt li>ul {
+		display: block;
+	}
+	.lg\)dsp\:li-vrt li:nth-child(1n) {
+		line-height: var(--dft-line-height);
+		margin-left: 0;
+		padding-left: 0;
+	}
+}
+@media (min-width:1800px) {
+	.xl\)dsp\:li-hrz {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	}
+	.xl\)dsp\:li-hrz li>ul {
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+	}
+	.xl\)dsp\:li-hrz,
+	.xl\)dsp\:li-hrz li>ul {
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+	}
+	.xl\)dsp\:li-hrz li:not(:last-child) {
+		padding-right: 1.75rem;
+	}
+	.xl\)dsp\:li-hrz li>ul li:first-child {
+		margin-left: -0.5rem;
+	}
+	.xl\)dsp\:li-vrt,
+	.xl\)dsp\:li-vrt li>ul {
+		display: block;
+	}
+	.xl\)dsp\:li-vrt li:nth-child(1n) {
+		line-height: var(--dft-line-height);
+		margin-left: 0;
+		padding-left: 0;
+	}
+}
+/*
+***
+    * property: ul-fa
+    * ver: 200315
+    * fnt: hide bullets and adjust margins
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
+***
+*/
+.ul-fa,
+.ul-fa li>ul {
+	list-style-type: none;
+	margin-left: 1rem;
+	padding-left: 1rem;
+}
+.li-fa {
+	display: inline-block;
+	margin-left: -1.75rem;
+	text-align: left;
+	width: 1.75rem;
+}
+/*
+***
+    * property: no-bullet(s)
+    * ver: 31201201
+    * fnt: unordered list without bullets
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
+	.no-bullets li>ul
+***
+*/
+.no-bullet,
+ul.no-bullets,
+ul.no-bullets ul:nth-of-type(1) {
+	list-style-type: none;
+}
+/*
+***
+    * element: <dd>
+    * ver: 190910-1
+    * fnt: describe a term/name used in conjunction with <dd> for context
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/dl
+***
+*/
+dt {
+	font-size: var(--font-size-larger);
+	font-weight: bolder;
+}
+dd {
+	line-height: var(--dft-line-height);
+	margin-left: 0;
+}
+@media (min-width:600px) {
+	dd {
+		margin-left: 1rem;
+	}
+}
+/*
+***
+    * property: xlst
+    * ver: 200315
+    * fnt: to be used in conjunction with excerpt list shortcode
+    * ref:
+***
+*/
+.xlst\:left,
+.xlst\:right {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-align-content: flex-start;
+	-ms-flex-line-pack: start;
+	align-content: flex-start;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+	width: 100%;
+}
+.xlst\:itm {
+	width: 100%;
+}
+.xlst\:itm:nth-child(2) {
+	padding: 0.5rem;
+}
+@media (min-width:1024px) {
+	.xlst\:left {
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+	.xlst\:right {
+		-webkit-flex-direction: row-reverse;
+		-ms-flex-direction: row-reverse;
+		flex-direction: row-reverse;
+	}
+	.xlst\:itm:nth-child(1) {
+		min-height: 10rem;
+		width: 33.3333%;
+	}
+	.xlst\:itm:nth-child(2) {
+		min-height: 10rem;
+		width: 66.6666%;
+	}
+}
+/*
+***
+    * element: txt-bi (block indent)
+    * element: txt-hi (hang indent)
+    * element: txt-pi (paragraph indent)
+    * ver: 30201018
+    * fnt: add paragraph indentation
+    * ref:
+***
+*/
+.aln\:txt-bi {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.aln\:txt-hi {
+	padding-left: 2rem;
+	text-indent: -2rem;
+}
+.aln\:txt-pi {
+	text-indent: 2rem;
+}
+/*
+***
+    * property: vs
+    * ver: 30201101
+    * fnt: set line height
+    * ref: developer.mozilla.org/en-US/docs/Web/CSS/line-height
+***
+*/
+.vs\:1\/2 {
+	font-size: calc(var(--font-size-md) * 0.5);
+	line-height: calc(var(--dft-line-height) * 0.5);
+}
+.vs\:3\/4 {
+	font-size: calc(var(--font-size-md) * 0.75);
+	line-height: calc(var(--dft-line-height) * 0.75);
+}
+.vs\:1 {
+	font-size: var(--font-size-md);
+	line-height: var(--dft-line-height);
+}
+.vs\:1-1\/2 {
+	font-size: var(--font-size-md);
+	line-height: calc(var(--dft-line-height) * 1.5);
+}
+.vs\:2 {
+	font-size: var(--font-size-md);
+	line-height: calc(var(--dft-line-height) * 2);
+}
+.vs\:2-1\/2 {
+	font-size: var(--font-size-md);
+	line-height: calc(var(--dft-line-height) * 2.5);
+}
+.vs\:3 {
+	font-size: var(--font-size-md);
+	line-height: calc(var(--dft-line-height) * 3);
+}
+/*
+***
+    * element: <table>
+    * ver: 26200515
+    * fnt: default tic-tac-toe table
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+    *
+    * <table>
+    *   <thead>
+    *       <tr>
+    *           <th>Header</th>
+    *       </tr>
+    *   </thead>
+    *   <tbody>
+    *       <tr>
+    *           <td>Cell</td>
+    *       </tr>
+    *   </tbody>
+    *   <tfoot>
+    *       <tr>
+    *           <td>Footer</td>
+    *       </tr>
+    *   </tfoot>
+    *   <caption>
+    * </table>
+    *
+***
+*/
+table {
+	background-color: transparent;
+	border-color: transparent;
+	table-layout: fixed;
+}
+table caption {
+	caption-side: bottom;
+	font-size: var(--font-size-sm-1x);
+	text-align: center;
+}
+/*: sm)media :*/
+@media (min-width: 600px) {
+	table {
+		font-size: var(--font-size-md);
+	}
+	table caption {
+		font-size: var(--font-size-sm);
+	}
+}
+table>thead>tr>td,
+table>tbody>tr>th,
+table>thead>tr>th {
+	font-weight: var(--font-wgt-medium);
+	text-align: left;
+	padding: 0.25rem 0.5rem;
+}
+table>thead>tr>th {
+	background-color: var(--hue-bas-up4);
+}
+table>thead>tr>th:not(:last-child),
+table>thead>tr>td:not(:last-child) {
+	border-right: 1px solid var(--hue-bas-up2);
+}
+table>tbody>tr:not(:last-child)>td,
+table>tbody>tr:not(:last-child)>th {
+	border-bottom: 1px solid var(--hue-bas-up2);
+}
+table>tbody>tr>td:not(:last-child),
+table>tbody>tr>th:not(:last-child) {
+	border-right: 1px solid var(--hue-bas-up2);
+}
+table>tbody>tr>td {
+	vertical-align: top;
+	padding: 0.25rem 0.5rem;
+}
+table>tfoot>tr>td {
+	background-color: var(--content-bg-color);
+	font-weight: 500;
+	text-align: left;
+	padding: 0.25rem 0.5rem;
+}
+/*
+***
+    * element: <tbody>
+    * ver: 200304
+    * fnt: display all borders (spreadsheet style)
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+***
+*/
+table>tbody.bdr\:xls>tr>td {
+	border: 1px solid var(--hue-bas-up1);
+}
+/*
+***
+    * element: <tbody>
+    * ver: 200304
+    * fnt: set all borders to transparent
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+***
+*/
+table>tbody.bdr\:none>tr>td {
+	border-color: transparent !important;
+}
+/*
+***
+    element: <table>
+    * ver: 30201201
+    * fnt: auto columns
+    * ref: see editor/web.css
+***
+*/
+table.cols\:auto-1,
+table.cols\:auto-2,
+table.cols\:auto-3,
+table.cols\:auto-4 {
+	border-collapse: collapse;
+	border-color: transparent !important;
+	vertical-align: top;
+	table-layout: fixed;
+	width: 100%;
+}
+/*
+***
+    element: <table>
+    * ver: 30201201
+    * fnt: predetermined columns
+    * ref: see editor.css
+	*
+	* !important is needed on mobile devices
+	* to overwrite the inline style but must 
+	* be excluded on the other media 
+	*
+***
+*/
+@media (max-width: 599px) {
+	table.cols\:fixed-2,
+	table.cols\:fixed-2 tbody,
+	table.cols\:fixed-2 tbody tr,
+	table.cols\:fixed-2 tbody tr td,
+	table.cols\:fixed-3,
+	table.cols\:fixed-3 tbody,
+	table.cols\:fixed-3 tbody tr,
+	table.cols\:fixed-3 tbody tr td,
+	table.cols\:fixed-4,
+	table.cols\:fixed-4 tbody,
+	table.cols\:fixed-4 tbody tr,
+	table.cols\:fixed-4 tbody tr td	{
+		display: block !important;
+		width: 100% !important;
+	}
+	table.cols\:fixed-2 tbody tr td,
+	table.cols\:fixed-3 tbody tr td,
+	table.cols\:fixed-4 tbody tr td {
+		border-color: transparent !important;
+		margin: 0 0 0.5rem 0;
+	}
+}
+@media (min-width: 600px) {
+	table.cols\:fixed-2,
+	table.cols\:fixed-3,
+	table.cols\:fixed-4 {
+		border-collapse: collapse;
+		border-color: transparent !important;
+		display: table;
+		table-layout: auto;
+		width: 100%;
+	}
+	table.cols\:fixed-2 tbody tr td,
+	table.cols\:fixed-3 tbody tr td,
+	table.cols\:fixed-4 tbody tr td {
+		border-color: transparent !important;
+		display: table-cell;
+		vertical-align: top;
+	}
+	table.cols\:fixed-2 tbody tr td {
+		width: 50%;
+	}
+	table.cols\:fixed-3 tbody tr td {
+		width: 33.3333%;
+	}
+	table.cols\:fixed-4 tbody tr td {
+		width: 25%;
+	}
+}
+/*
+***
+    * elements: <h1>–<h6>
+    * ver: 1900910
+    * fnt: style headers
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
+***
+*/
+h1 {
+	color: var(--h1-color);
+	font-family: var(--h1-font);
+	font-size: var(--h1-size);
+	font-style: var(--h1-style);
+	font-weight: var(--h1-weight);
+}
+h2 {
+	color: var(--h2-color);
+	font-family: var(--h2-font);
+	font-size: var(--h2-size);
+	font-style: var(--h2-style);
+	font-weight: var(--h2-weight);
+}
+h3 {
+	color: var(--h3-color);
+	font-family: var(--h3-font);
+	font-size: var(--h3-size);
+	font-style: var(--h3-style);
+	font-weight: var(--h3-weight);
+}
+h4 {
+	color: var(--h4-color);
+	font-family: var(--h4-font);
+	font-size: var(--h4-size);
+	font-style: var(--h4-style);
+	font-weight: var(--h4-weight);
+}
+h5 {
+	color: var(--h5-color);
+	font-family: var(--h5-font);
+	font-size: var(--h5-size);
+	font-style: var(--h5-style);
+	font-weight: var(--h5-weight);
+}
+h6 {
+	color: var(--h6-color);
+	font-family: var(--h6-font);
+	font-size: var(--h6-size);
+	font-style: var(--h6-style);
+	font-weight: var(--h6-weight);
+}
+/*
+***
+    * property: cnt
+    * ver: 190910-1
+    * fnt: add counter to header
+    * ref: developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+***
+*/
+h1.cnt::before,
+h2.cnt::before,
+h3.cnt::before,
+h4.cnt::before,
+h5.cnt::before,
+h6.cnt::before {
+	counter-increment: section;
+	content: counter(section) ".";
+	color: var(--content-counter-color);
+	padding-right: 0.5rem;
+}
+h1.cnt\!alt::before,
+h2.cnt\!alt::before,
+h3.cnt\!alt::before,
+h4.cnt\!alt::before,
+h5.cnt\!alt::before,
+h6.cnt\!alt::before {
+	counter-increment: section;
+	content: counter(section) ":";
+	color: var(--content-counter-color);
+	padding-right: 0.5rem;
+}
+/*
+***
+    * element: <p>
+    * ver: 190910-1
+    * fnt: present content as paragraph
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/p
+***
+*/
+p {
+	line-height: var(--dft-line-height);
+}
+/*
+***
+    * element: <blockquote>
+    * ver: 29200815
+    * fnt: present content as block quote
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote
+***
+*/
+blockquote {
+	border-left: solid thick var(--hue-pri-up3);
+	border-radius: 0.6666rem;
+	margin: 0.75rem 0 0.75rem 0;
+	padding: 1rem;
+	width: 100%;
+}
+@media (min-width: 600px) {
+	blockquote {
+		margin-left: auto;
+		margin-right: auto;
+		padding: 1rem 1.5rem 1rem 1.5rem;
+		width: 90%;
+	}
+}
+cite {
+	font-style: oblique;
+}
+/*
+***
+    * elements: <button> / <input> / <select> / <textarea>
+    * ver: 190910-1
+    * fnt: form elements
+    * ref:
+***
+*/
+button,
+input,
+select,
+textarea {
+	font-size: 100%;
+	line-height: inherit;
+	margin: 0;
+	max-width: 100%;
+}
+input,
+textarea {
+	background-color: var(--hue-wht);
+}
+input:focus,
+textarea:focus {
+	outline: 0;
+}
+input[type=search]::-webkit-search-cancel-button {
+	-webkit-appearance: searchfield-cancel-button;
+}
+fieldset {
+	min-width: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+legend {
+	display: block;
+	white-space: normal;
+	width: 100%;
+	padding: 0;
+	margin-bottom: 8px;
+	font-size: 24px;
+	font-size: 1.5rem;
+	line-height: inherit;
+}
+:-webkit-input-placeholder {
+	color: var(--hue-bas-dn1);
+}
+:-moz-placeholder {
+	color: var(--hue-bas-dn1);
+}
+:-moz-placeholder {
+	color: var(--hue-bas-dn1);
+	opacity: 1
+}
+:-ms-input-placeholder {
+	color: var(--hue-bas-dn1);
+}
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=text],
+input[type=url],
+select,
+textarea {
+	color: var(--hue-bas-dn2);
+	border: 1px solid var(--hue-bas-up1);
+	border-radius: 0.3333rem;
+}
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=text]:focus,
+input[type=url]:focus,
+select:focus,
+textarea:focus {
+	color: var(--hue-bas-dn4);
+}
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=text],
+input[type=url] {
+	padding: 8px 10px;
+}
+select {
+	padding: 8px 10px;
+	width: 98%;
+}
+textarea {
+	padding: 8px 10px;
+	resize: vertical;
+	vertical-align: top;
+	width: 98%;
+}
+textarea#comment {
+	margin-bottom: 4px;
+}
+pre#textarea {
+	background: 0 0;
+	box-shadow: none;
+	border: 0;
+	color: var(--hue-bas-dn4);
+	font-family: var(--font-family-mono);
+	font-size: .875rem !important;
+	padding: 0;
+	white-space: pre-wrap;
+}
+.pre-caption {
+	background-color: var(--hue-wht);
+	color: var(--hue-bas-dn1);
+	font-size: .875rem;
+	letter-spacing: 6px;
+	letter-spacing: .375rem;
+	margin-top: -4px;
+	text-align: center;
+	width: 100%;
+}
+.ratio-container {
+	height: auto;
+	width: 100%;
+}
+td .ratio-container {
+	padding-top: 2px;
+}
+/*
+***
+    * property: material-icons
+    * ver: 30201101
+    * fnt: material icon hack to align icons to font size
+    *
+***
+*/
+.material-icons,
+.material-icons-outlined,
+.material-icons-round,
+.material-icons-sharp,
+.material-icons-two-tone {
+	font-size: var(--font-size-md);
+	vertical-align: -10%;
+}
+.material-icons.fnt\:siz-md-1x,
+.material-icons-outlined.fnt\:siz-md-1x,
+.material-icons-round.fnt\:siz-md-1x,
+.material-icons-sharp.fnt\:siz-md-1x,
+.material-icons-two-tone.fnt\:siz-md-1x {
+	font-size: var(--font-size-md-1x);
+}
+.material-icons.fnt\:siz-lg,
+.material-icons-outlined.fnt\:siz-lg,
+.material-icons-round.fnt\:siz-lg,
+.material-icons-sharp.fnt\:siz-lg,
+.material-icons-two-tone.fnt\:siz-lg {
+	font-size: var(--font-size-h6);
+}
+.material-icons.fnt\:siz-lg-1x,
+.material-icons-outlined.fnt\:siz-lg-1x,
+.material-icons-round.fnt\:siz-lg-1x,
+.material-icons-sharp.fnt\:siz-lg-1x,
+.material-icons-two-tone.fnt\:siz-lg-1x {
+	font-size: var(--font-size-h5);
+}
+.material-icons.fnt\:siz-lg-2x,
+.material-icons-outlined.fnt\:siz-lg-2x,
+.material-icons-round.fnt\:siz-lg-2x,
+.material-icons-sharp.fnt\:siz-lg-2x,
+.material-icons-two-tone.fnt\:siz-lg-2x {
+	font-size: var(--font-size-h4);
+}
+.material-icons.fnt\:siz-lg-3x,
+.material-icons-outlined.fnt\:siz-lg-3x,
+.material-icons-round.fnt\:siz-lg-3x,
+.material-icons-sharp.fnt\:siz-lg-3x,
+.material-icons-two-tone.fnt\:siz-lg-3x {
+	font-size: var(--font-size-h3);
+}
+.material-icons.fnt\:siz-lg-4x,
+.material-icons-outlined.fnt\:siz-lg-4x,
+.material-icons-round.fnt\:siz-lg-4x,
+.material-icons-sharp.fnt\:siz-lg-4x,
+.material-icons-two-tone.fnt\:siz-lg-4x {
+	font-size: var(--font-size-h2);
+}
+.material-icons.fnt\:siz-lg-5x,
+.material-icons-outlined.fnt\:siz-lg-5x,
+.material-icons-round.fnt\:siz-lg-5x,
+.material-icons-sharp.fnt\:siz-lg-5x,
+.material-icons-two-tone.fnt\:siz-lg-5x {
+	font-size: var(--font-size-h1);
+}
+/*
+***
+    * element: figure
+    * ver: 200318
+    * fnt: wraps image with caption
+    * ref:
+***
+*/
+figure {
+	display: block;
+}
+/*
+***
+    property: wp-caption
+    * ver: 190520
+    * fnt: center image caption
+    * ref:
+***
+*/
+.wp-caption {
+	font-size: var(--font-size-sm);
+	text-align: center;
+	width: auto !important;
+}
+/*
+***
+    * property: clearfix
+    * ver: 29200815
+    * fnt: clear floats
+    * ref: css-tricks.com/snippets/css/clear-fix/
+***
+*/
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+/*
+***
+    * property: alignleft/center/right
+    * ver: 200318
+    * fnt: floats left/right or centers
+    * ref:
+***
+*/
+.alignleft {
+	float: left;
+	margin-right: 0.5rem;
+}
+.aligncenter {
+	margin: 0.5rem auto 0.5rem auto;
+}
+.alignright {
+	float: right;
+	margin-left: 0.5rem;
+}
+.gallery {
+	display: block;
+	width: 100%;
+}
+.gallery .gallery-item {
+	padding: 5px;
+}
+.gallery .gallery-icon img {
+	height: auto;
+	width: 100%;
+}
+.gallery .gallery-caption {
+	color: var(--hue-bas-dn1);
+	display: block;
+	font-size: 14px;
+	font-size: .875em;
+	padding-top: 4px;
+	text-align: center;
+}
+@media (min-width: 900px) {
+	.gallery-columns-2 .gallery-item {
+		float: left;
+		width: 50%;
+	}
+	.gallery-columns-3 .gallery-item {
+		float: left;
+		max-width: 33.33%;
+	}
+	.gallery-columns-4 .gallery-item {
+		float: left;
+		max-width: 25%;
+	}
+	.gallery-columns-5 .gallery-item {
+		float: left;
+		max-width: 20%;
+	}
+	.gallery-columns-6 .gallery-item {
+		float: left;
+		max-width: 16.66%;
+	}
+	.gallery-columns-7 .gallery-item {
+		float: left;
+		max-width: 14.28%;
+	}
+	.gallery-columns-8 .gallery-item {
+		float: left;
+		max-width: 12.5%;
+	}
+	.gallery-columns-9 .gallery-item {
+		float: left;
+		max-width: 11.11%;
+	}
+	.gallery:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+/*
+***
+    * property: frame
+    * ver: 200527
+    * fnt: create a content frame using table element
+    * ref: same design as pre element
+***
+*/
+@media (max-width: 599px) {
+	table.frame {
+		width: 100% !important;
+	}
+	table.frame>tbody>tr>td {
+		border: solid thin var(--hue-bas-up3);
+		background-color: var(--hue-bas-up5);
+		border-radius: 0.1666rem;
+		display: block;
+		margin: 0.5rem 0 0.5rem 0;
+		padding: 1rem;
+		width: 100% !important;
+	}
+}
+/*: sm)media :*/
+@media (min-width: 600px) {
+	table.frame {
+		border-collapse: collapse;
+		margin: 0.5rem 0 0.5rem 0;
+		table-layout: auto;
+		width: 100%;
+	}
+	table.frame>tbody>tr>td {
+		border-color: transparent;
+		border: solid medium var(--hue-bas-up3);
+		background-color: var(--hue-bas-up5);
+		border-radius: 0.1666rem;
+		padding: 1rem;
+	}
+}
+/*
+***
+    * property: svg:<size>
+    * ver: 200422
+    * fnt: size svg images to fnt sizes
+    * ref:
+***
+*/
+.svg\:h1 {
+	display: inline;
+	height: 3.25rem;
+	padding-bottom: 0.5rem;
+	width: 3.25rem;
+}
+.svg\:h2 {
+	display: inline;
+	height: 2.4375rem;
+	padding-bottom: 0.3125rem;
+	width: 2.4375rem;
+}
+.svg\:h3 {
+	display: inline;
+	height: 2.125rem;
+	padding-bottom: 0.25rem;
+	width: 2.125rem;
+}
+.svg\:h4 {
+	display: inline;
+	height: 1.812rem;
+	padding-bottom: 0.25rem;
+	width: 1.812rem;
+}
+.svg\:h5 {
+	display: inline;
+	height: 1.5rem;
+	padding-bottom: 0.1875rem;
+	width: 1.5rem;
+}
+.svg\:h6 {
+	display: inline;
+	height: 1.375rem;
+	padding-bottom: 0.1875rem;
+	width: 1.375rem;
+}
+.svg\:large {
+	display: inline;
+	height: 1.5625rem;
+	padding-bottom: 0.3125rem;
+	width: 1.5625rem;
+}
+.svg\:medium {
+	display: inline;
+	height: 1.25rem;
+	padding-bottom: 0.1875rem;
+	width: 1.25rem;
+}
+.svg\:small {
+	display: inline;
+	height: 1rem;
+	padding-bottom: 0.125rem;
+	width: 1rem;
+}
+/*
+***
+    * element: <button>
+    * ver: 30201101
+    * fnt: style button
+    * ref: developer.mozilla.org/en-US/docs/Web/HTML/Element/button
+***
+*/
+button:focus,
+button a:focus {
+	outline: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+button,
+button.pri {
+	align-items: center;
+	background-color: var(--hue-pri-up4);
+	border: thin solid var(--hue-pri-up5);
+	border-radius: 0.1666rem;
+	color: var(--hue-blk);
+	display: inline-flex;
+	justify-content: center;
+	padding: 0.5rem 1.5rem;
+	text-align: center;
+}
+button:hover,
+button.pri:hover {
+	background-color: var(--hue-pri);
+	border: thin solid var(--hue-pri-up1);
+	color: var(--hue-wht);
+}
+button:active,
+button.pri:active {
+	background-color: var(--hue-pri-dn2);
+	border: thin solid var(--hue-pri-dn1);
+}
+button.sec {
+	align-items: center;
+	background-color: var(--hue-sec-up4);
+	border: thin solid var(--hue-sec-up5);
+	border-radius: 0.1666rem;
+	color: var(--hue-blk);
+	display: inline-flex;
+	justify-content: center;
+	padding: 0.5rem 1.5rem;
+	text-align: center;
+}
+button.sec:hover {
+	background-color: var(--hue-sec);
+	border: thin solid var(--hue-sec-up1);
+	color: var(--hue-wht);
+}
+button.sec:active {
+	background-color: var(--hue-sec-dn2);
+	border: thin solid var(--hue-sec-dn1);
+}
+button.bas {
+	align-items: center;
+	background-color: var(--hue-bas-up3);
+	border: thin solid var(--hue-bas-up4);
+	border-radius: 0.1666rem;
+	color: var(--hue-blk);
+	display: inline-flex;
+	justify-content: center;
+	padding: 0.5rem 1.5rem;
+	text-align: center;
+}
+button.bas:hover {
+	background-color: var(--hue-bas-dn3);
+	border: thin solid var(--hue-bas-dn2);
+	color: var(--hue-wht);
+}
+button.bas:active {
+	background-color: var(--hue-bas-dn4);
+	border: thin solid var(--hue-bas-dn3);
+}
+button.img {
+	align-items: center;
+	background-color: transparent;
+	border: thin solid transparent;
+	border-radius: 0.1666rem;
+	display: inline-flex;
+	justify-content: center;
+	padding: 0.5rem 1.5rem;
+	text-align: center;
+}
+/*
+***
+    * property: btn:facade
+    * ver: 30201101
+    * fnt: simulate the appearance of a button
+***
+*/
+.btn\:facade,
+.btn\:pri-facade {
+	background-color: var(--hue-pri-up4);
+	border: thin solid var(--hue-pri-up5);
+	color: var(--hue-blk);
+	border-radius: 0.1666rem;
+	display: inline-block;
+	font-size: var(--font-size-sm-1x);
+	font-weight: var(--font-wgt-normal);
+	padding: 0.0625rem 0.125rem 0.0625rem 0.125rem;
+}
+.btn\:facade\!hover:hover,
+.btn\:pri-facade\!hover:hover {
+	background-color: var(--hue-pri);
+	border: thin solid var(--hue-pri-up1);
+	color: var(--hue-wht);
+	cursor: pointer;
+}
+.btn\:sec-facade {
+	background-color: var(--hue-sec-up4);
+	border: thin solid var(--hue-sec-up5);
+	color: var(--hue-blk);
+	border-radius: 0.1666rem;
+	display: inline-block;
+	font-size: var(--font-size-sm-1x);
+	font-weight: var(--font-wgt-normal);
+	padding: 0.0625rem 0.125rem 0.0625rem 0.125rem;
+}
+.btn\:sec-facade\!hover:hover {
+	background-color: var(--hue-sec);
+	border: thin solid var(--hue-sec-up1);
+	color: var(--hue-wht);
+	cursor: pointer;
+}
+.btn\:bas-facade {
+	background-color: var(--hue-bas-up3);
+	border: thin solid var(--hue-bas-up2);
+	color: var(--hue-blk);
+	border-radius: 0.1666rem;
+	display: inline-block;
+	font-size: var(--font-size-sm-1x);
+	font-weight: var(--font-wgt-normal);
+	padding: 0.0625rem 0.125rem 0.0625rem 0.125rem;
+}
+.btn\:bas-facade\!hover:hover {
+	background-color: var(--hue-bas-dn3);
+	border: thin solid var(--hue-bas-dn2);
+	color: var(--hue-wht);
+	cursor: pointer;
+}
+/*
+***
+    * property: trn
+    * ver: 20201001
+    * fnt: text transformations
+    * ref: developer.mozilla.org/en-US/docs/Web/CSS/text-transform
+***
+*/
+.trn\:txt-upper {
+	text-transform: uppercase;
+}
+.trn\:txt-lower {
+	text-transform: lowercase;
+}
+.trn\:txt-capital {
+	text-transform: capitalize;
+}
+/*
+***
+    * property: drp
+    * ver: 31201215
+    * fnt: add (light/medium/dark) drop shadow
+    * ref: developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow
+***
+*/
+.trn\:shadow-lt {
+	filter: drop-shadow(0.25rem 0.25rem 0.25rem var(--hue-bas-up1));
+}
+.trn\:shadow,
+.trn\:shadow-md {
+	filter: drop-shadow(0.25rem 0.25rem 0.25rem var(--hue-bas));
+}
+.trn\:shadow-dk {
+	filter: drop-shadow(0.25rem 0.25rem 0.25rem var(--hue-bas-dn1));
+}
+/*
+***
+    * property: trn
+    * ver: 200308
+    * fnt: image/button hover annimations
+    * ref: ianlunn.github.io/Hover/
+***
+*/
+/*: nudge image :*/
+.trn\:nudge\!focus,
+.trn\:nudge\!hover {
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+}
+.trn\:nudge\!focus:focus,
+.trn\:nudge\!hover:hover {
+	-moz-transform: scale(1.02);
+	-webkit-transform: scale(1.02);
+	transform: scale(1.02);
+}
+/*: image greyscale :*/
+.trn\:greyscale\!focus,
+.trn\:greyscale\!hover {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+.trn\:greyscale\!focus:focus,
+.trn\:greyscale\!hover:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+/*: image focalpoint :*/
+.trn\:focalpoint\!focus,
+.trn\:focalpoint\!hover {
+	opacity: .85;
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+.trn\:focalpoint\!focus:focus,
+.trn\:focalpoint\!hover:hover {
+	opacity: 1;
+}
+/*: image/button grow :*/
+.trn\:grow\!focus,
+.trn\:grow\!hover {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+}
+.trn\:grow\!focus:focus,
+.trn\:grow\!hover:hover {
+	-webkit-transform: scale(1.04);
+	transform: scale(1.04);
+}
+/*: image/button grow shadow :*/
+.trn\:grow-shadow\!focus,
+.trn\:grow-shadow\!hover {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: box-shadow, transform;
+	transition-property: box-shadow, transform;
+}
+.trn\:grow-shadow\!hover:hover,
+.trn\:grow-shadow\!focus:focus {
+	box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+	-webkit-transform: scale(1.04);
+	transform: scale(1.04);
+}
+/*: image/button shadow :*/
+.trn\:shadow\!hover,
+.trn\:shadow\!focus {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	/*box-shadow: 0 0 1px rgba(0, 0, 0, 0);*/
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: filter;
+	transition-property: filter;
+}
+.trn\:shadow\!hover:hover,
+.trn\:shadow\!focus:focus {
+	filter: drop-shadow(0 0.25rem 0.25rem var(--hue-bas));
+}
+/*: image/button glow shadow :*/
+.trn\:glow\!hover,
+.trn\:glow\!focus {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: filter;
+	transition-property: filter;
+}
+.trn\:glow\!hover:hover,
+.trn\:glow\!focus:focus {
+	filter: drop-shadow(0 0 0.25rem var(--hue-bas-dn1));
+}
+/*: image/button drop shadow :*/
+.trn\:drop-shadow\!hover,
+.trn\:drop-shadow\!focus {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: filter;
+	transition-property: filter;
+}
+.trn\:drop-shadow\!hover:hover,
+.trn\:drop-shadow\!focus:focus {
+	filter: drop-shadow(0.25rem 0.25rem 0.25rem var(--hue-bas));
+}
+/*: button only float shadow :*/
+.trn\:float-shadow\!hover,
+.trn\:float-shadow\!focus {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+}
+.trn\:float-shadow\!hover:before,
+.trn\:float-shadow\!focus:before {
+	pointer-events: none;
+	position: absolute;
+	z-index: -1;
+	content: '';
+	top: 100%;
+	left: 5%;
+	height: 10px;
+	width: 90%;
+	opacity: 0;
+	background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+	/* W3C */
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform, opacity;
+	transition-property: transform, opacity;
+}
+.trn\:float-shadow\!hover:hover,
+.trn\:float-shadow\!focus:focus {
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+	/* move the element up by 5px */
+}
+.trn\:float-shadow\!hover:hover:before,
+.trn\:float-shadow\!focus:focus:before {
+	opacity: 1;
+	-webkit-transform: translateY(5px);
+	transform: translateY(5px);
+	/* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+/*
+***
+    * property: @XxX
+    * dsc: set aspect ratio
+    * bld: 01210115
+    * fnt: set aspect ratio of images / videos
+    * ref: <div class="width"><div class="@ratio">img/vid tags</div></div>
+***
+*/
+.ar\:1x1,
+.ar\:3x2,
+.ar\:4x3,
+.ar\:7x5,
+.ar\:16x9,
+.ar\:16x10,
+.ar\:17x9,
+.ar\:21x9 {
+	position: relative;
+	width: 100%;
+}
+.ar\:1x1 {
+	padding-bottom: 100%;
+}
+.ar\:3x2 {
+	padding-bottom: 66.6666%;
+}
+.ar\:4x3 {
+	padding-bottom: 75%;
+}
+.ar\:7x5 {
+	padding-bottom: 71.4286%;
+}
+.ar\:16x9 {
+	padding-bottom: 56.25%;
+}
+.ar\:16x10 {
+	padding-bottom: 62.5%;
+}
+.ar\:17x9 {
+	padding-bottom: 52.9412%;
+}
+.ar\:21x9 {
+	padding-bottom: 42.8571%;
+}
+.ar\:content,
+.ar\:container iframe,
+.ar\:container object,
+.ar\:container embed {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/*
+ * EOF: assets/css/theme/common.css / 210630-1
+ */
